@@ -1,0 +1,51 @@
+<section class=" bg-image">
+  <div class="mask d-flex align-items-center h-30 gradient-custom-3">
+    <div class="container py-5">
+      <div class="row d-flex justify-content-center align-items-center h-50">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+          <div class="card bg-white text-dark" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+              <form (ngSubmit)="onSubmits()" method="post">
+
+                <div class="form-outline mb-4" [class.error]="fullName.invalid && (fullName.dirty || fullName.touched)">
+                  <input type="text" id="fullName" class="form-control" [(ngModel)]="formData.fullName" name="fullName" required #fullName="ngModel" />
+                  <label class="form-label" for="fullName">Full Name</label>
+                  <div *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="text-danger small">Full Name is required</div>
+                </div>
+
+                <div class="form-outline mb-4" [class.error]="email.invalid && (email.dirty || email.touched)">
+                  <input type="email" id="email" class="form-control" [(ngModel)]="formData.email" name="email" required #email="ngModel"/>
+                  <label class="form-label" for="email">Email</label>
+                  <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger small">Email is required and must be valid</div>
+                </div>
+
+
+                <div class="form-outline mb-4" [class.error]="password.invalid && (password.dirty || password.touched)">
+                  <input type="password" id="password" class="form-control" [(ngModel)]="formData.password" name="password" required #password="ngModel" />
+                  <label class="form-label" for="password">Password</label>
+                  <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger small">Password is required</div>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" id="address" class="form-control" [(ngModel)]="formData.address" name="address" />
+                  <label class="form-label" for="address">Address</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="number" id="contact" class="form-control" [(ngModel)]="formData.contact" name="contact" />
+                  <label class="form-label" for="contact">Contact</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block mb-4">Create Account</button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br><br><br>

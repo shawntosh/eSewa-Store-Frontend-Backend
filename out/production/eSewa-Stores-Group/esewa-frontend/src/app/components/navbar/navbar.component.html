@@ -1,0 +1,22 @@
+<p-menubar [model]="items" class="custom-menubar">
+  <ng-template pTemplate="start">
+    <img alt="esewa Logo" src="../assets/esewa.png" height="40" class="mr-2" />
+  </ng-template>
+
+  <!-- Center section with search bar -->
+  <div class="center-section">
+    <ng-container>
+      <input type="text" pInputText placeholder="Search" class="w-full" />
+    </ng-container>
+  </div>
+
+  <!-- End section with Login, SignIn, and Logout -->
+  <ng-template pTemplate="end">
+    <div class="d-flex gap-1">
+      <button *ngIf="!isLoggedIn()" pButton type="button" label="Login" icon="pi pi-fw pi-user" routerLink="/login"></button>
+      <button *ngIf="!isLoggedIn()" pButton type="button" label="SignIn" icon="pi pi-fw pi-envelope" routerLink="/register"></button>
+      <button *ngIf="isLoggedIn()" pButton type="button" label="Logout" icon="pi pi-fw pi-power-off" (click)="logout()"></button>
+    </div>
+  </ng-template>
+</p-menubar>
+

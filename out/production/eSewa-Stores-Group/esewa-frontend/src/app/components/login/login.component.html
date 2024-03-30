@@ -1,0 +1,60 @@
+<!--<div class="grid">-->
+<!--  <div class="flex flex-column md:flex-row">-->
+<!--    <div class="w-full md:w-5 flex flex-column align-items-center justify-content-center gap-3 py-5">-->
+<!--      <div class="flex flex-wrap justify-content-center align-items-center gap-2">-->
+<!--        <label class="w-6rem">Email</label>-->
+<!--        <input pInputText [(ngModel)]="email" type="text" class="w-100" />-->
+<!--      </div>-->
+<!--      <div class="flex flex-wrap justify-content-center align-items-center gap-2">-->
+<!--        <label class="w-6rem">Password</label>-->
+<!--        <input pPassword [(ngModel)]="password" toggleMask="true" class="w-100" />-->
+<!--      </div>-->
+<!--      <p-button label="Login" icon="pi pi-user" styleClass="w-100 mx-auto" (click)="login()"></p-button>-->
+<!--    </div>-->
+<!--    <div class="w-full md:w-2">-->
+<!--      <p-divider layout="vertical" styleClass="hidden md:flex"><b>OR</b></p-divider>-->
+<!--      <p-divider layout="horizontal" styleClass="flex md:hidden" [align]="'center'"><b>OR</b></p-divider>-->
+<!--    </div>-->
+<!--    <div class="w-full md:w-5 flex align-items-center justify-content-center py-5">-->
+<!--      <p-button label="Sign Up" icon="pi pi-user-plus" styleClass="p-button-success w-100"></p-button>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<section class="vh-100 gradient-custom mb-9">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card bg-white text-dark" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <div class="">
+
+              <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
+              <p class="text-dark-50 mb-5">Please enter your login and password!</p>
+
+              <div class="form-outline form-white mb-4">
+                <label class="w-6rem">Email</label>
+                <input pInputText [(ngModel)]="email" type="text" class="w-100" />
+              </div>
+
+              <div class="flex flex-wrap justify-content-center align-items-center gap-2">-->
+                        <label class="w-6rem">Password</label>
+                        <input pPassword [(ngModel)]="password" toggleMask="true" class="w-100" />
+                      </div>
+              <h3> <p class="small mb-5 pb-lg-2"><a class="text-dark-50" href="#!">Forgot password?</a></p></h3>
+
+              <p-button label="Login" icon="pi pi-user" styleClass="w-100 mx-auto" (click)="login()"></p-button>
+            </div>
+
+            <div>
+              <p class="mb-0">Don't have an account? <a routerLink="/register" class="text-dark-50 fw-bold">Sign Up</a>
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
